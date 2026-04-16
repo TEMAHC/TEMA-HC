@@ -1,0 +1,313 @@
+!DOCTYPE html
+html lang=es
+head
+meta charset=UTF-8
+meta name=viewport content=width=device-width, initial-scale=1.0
+titleContacto · TEMAtitle
+
+link href=httpsfonts.googleapis.comcss2family=Interwght@300;400;500;600&display=swap rel=stylesheet
+
+style
+
+root {
+  --primary #b91c3b;
+  --dark #0f172a;
+  --text #1e293b;
+  --muted #64748b;
+}
+
+ BASE 
+body {
+  margin 0;
+  font-family 'Inter', sans-serif;
+  background radial-gradient(circle at 20% 10%, rgba(185,28,59,0.08), transparent 40%),
+              radial-gradient(circle at 80% 90%, rgba(59,130,246,0.08), transparent 40%),
+              #f8fafc;
+  color var(--text);
+}
+
+ HEADER 
+header {
+  display flex;
+  justify-content space-between;
+  padding 20px 40px;
+  position sticky;
+  top 0;
+  background rgba(255,255,255,0.7);
+  backdrop-filter blur(12px);
+  border-bottom 1px solid rgba(0,0,0,0.05);
+}
+
+header strong {
+  font-weight 600;
+}
+
+header strong a {
+  color inherit;
+  text-decoration none;
+}
+
+header nav a {
+  margin-left 24px;
+  color var(--muted);
+  font-size 14px;
+  text-decoration none;
+}
+
+header nav ahover {
+  color var(--primary);
+}
+
+ CONTACT PAGE 
+.contact-hero {
+  text-align center;
+  padding 100px 20px 40px;
+}
+
+.contact-hero h1 {
+  font-size 56px;
+  font-weight 600;
+  letter-spacing -1px;
+}
+
+.contact-hero p {
+  margin-top 16px;
+  font-size 20px;
+  color var(--muted);
+  max-width 700px;
+  margin-inline auto;
+}
+
+.form-section {
+  max-width 640px;
+  margin 0 auto;
+  padding 0 20px 100px;
+}
+
+.form-card {
+  padding 40px;
+  border-radius 24px;
+  background rgba(255,255,255,0.7);
+  backdrop-filter blur(14px);
+  border 1px solid rgba(0,0,0,0.05);
+  box-shadow 0 20px 50px rgba(0,0,0,0.06);
+}
+
+.form-group {
+  margin-bottom 24px;
+}
+
+.form-group label {
+  display block;
+  margin-bottom 8px;
+  font-size 14px;
+  font-weight 500;
+  color var(--text);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width 100%;
+  padding 14px 16px;
+  border-radius 12px;
+  border 1px solid rgba(0,0,0,0.1);
+  background rgba(255,255,255,0.8);
+  font-family 'Inter', sans-serif;
+  font-size 15px;
+  color var(--text);
+  transition 0.3s;
+  box-sizing border-box;
+}
+
+.form-group inputfocus,
+.form-group textareafocus,
+.form-group selectfocus {
+  outline none;
+  border-color var(--primary);
+  box-shadow 0 0 0 3px rgba(185,28,59,0.1);
+}
+
+.form-group textarea {
+  min-height 140px;
+  resize vertical;
+}
+
+.form-row {
+  display grid;
+  grid-template-columns 1fr 1fr;
+  gap 20px;
+}
+
+ BUTTON 
+.btn {
+  display inline-block;
+  padding 14px 28px;
+  border-radius 12px;
+  font-weight 500;
+  font-size 15px;
+  font-family 'Inter', sans-serif;
+  cursor pointer;
+  transition 0.3s;
+  border none;
+}
+
+.btn-primary {
+  background linear-gradient(135deg, #b91c3b, #7f1d1d);
+  color white;
+  box-shadow 0 10px 30px rgba(185,28,59,0.3);
+}
+
+.btn-primaryhover {
+  transform translateY(-2px);
+}
+
+.btn-submit {
+  width 100%;
+  margin-top 8px;
+}
+
+ SUCCESS MESSAGE 
+.success-message {
+  display none;
+  text-align center;
+  padding 40px;
+}
+
+.success-message h2 {
+  font-size 28px;
+  color var(--text);
+}
+
+.success-message p {
+  color var(--muted);
+  font-size 16px;
+}
+
+.success-message.visible {
+  display block;
+}
+
+form.hidden {
+  display none;
+}
+
+ FOOTER 
+footer {
+  text-align center;
+  padding 40px;
+  color #94a3b8;
+}
+
+@media (max-width 600px) {
+  .contact-hero h1 {
+    font-size 36px;
+  }
+  .form-row {
+    grid-template-columns 1fr;
+  }
+  .form-card {
+    padding 24px;
+  }
+}
+
+style
+head
+
+body
+
+header
+  stronga href=TEMAastrong
+  nav
+    a href=#featuresProductoa
+    a href=#planesPreciosa
+    a href=contactoContactoa
+  nav
+header
+
+div class=contact-hero
+  h1Contacta con nosotrosh1
+  pCuéntanos sobre tu empresa y te ayudaremos a encontrar la solución perfecta para gestionar tus emisiones.p
+div
+
+div class=form-section
+  div class=form-card
+    form id=contact-form name=contacto method=POST data-netlify=true netlify-honeypot=bot-field
+      input type=hidden name=form-name value=contacto
+      p style=displaynone
+        labelNo rellenar input name=bot-fieldlabel
+      p
+
+      div class=form-row
+        div class=form-group
+          label for=nombreNombrelabel
+          input type=text id=nombre name=nombre placeholder=Tu nombre required
+        div
+        div class=form-group
+          label for=empresaEmpresalabel
+          input type=text id=empresa name=empresa placeholder=Nombre de tu empresa required
+        div
+      div
+
+      div class=form-group
+        label for=emailCorreo electrónicolabel
+        input type=email id=email name=email placeholder=tu@empresa.com required
+      div
+
+      div class=form-group
+        label for=telefonoTeléfono (opcional)label
+        input type=tel id=telefono name=telefono placeholder=+34 600 000 000
+      div
+
+      div class=form-group
+        label for=planPlan de interéslabel
+        select id=plan name=plan
+          option value= disabled selectedSelecciona un planoption
+          option value=accesoAcceso — 3.012€añooption
+          option value=asesoriaAsesoría — 7.512€añooption
+          option value=completoCompleto — 10.362€añooption
+          option value=no-seguroNo estoy segurooption
+        select
+      div
+
+      div class=form-group
+        label for=mensajeMensajelabel
+        textarea id=mensaje name=mensaje placeholder=¿En qué podemos ayudartetextarea
+      div
+
+      button type=submit class=btn btn-primary btn-submitEnviar mensajebutton
+    form
+
+    div id=success-message class=success-message
+      h2Mensaje enviadoh2
+      pGracias por contactarnos. Nos pondremos en contacto contigo lo antes posible.p
+    div
+  div
+div
+
+footer
+  © 2026 TEMA · Plataforma de emisiones
+footer
+
+script
+  var form = document.getElementById('contact-form');
+  var successMsg = document.getElementById('success-message');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    fetch('', {
+      method 'POST',
+      headers { 'Content-Type' 'applicationx-www-form-urlencoded' },
+      body new URLSearchParams(new FormData(form)).toString()
+    }).then(function(response) {
+      if (response.ok) {
+        form.classList.add('hidden');
+        successMsg.classList.add('visible');
+      }
+    });
+  });
+script
+
+body
+html
