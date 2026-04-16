@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TEMA · Plataforma de Emisiones</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+  --primary: #b91c3b;
+  --dark: #0f172a;
+  --text: #1e293b;
+  --muted: #64748b;
+}
+
+/* BASE */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at 20% 10%, rgba(185,28,59,0.08), transparent 40%),
+              radial-gradient(circle at 80% 90%, rgba(59,130,246,0.08), transparent 40%),
+              #f8fafc;
+  color: var(--text);
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+header strong {
+  font-weight: 600;
+}
+
+header nav a {
+  margin-left: 24px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 140px 20px 100px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  margin-top: 16px;
+  font-size: 20px;
+  color: var(--muted);
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #b91c3b, #7f1d1d);
+  color: white;
+  box-shadow: 0 10px 30px rgba(185,28,59,0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+/* SECTIONS */
+section {
+  padding: 100px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 34px;
+}
+
+section p {
+  text-align: center;
+  color: var(--muted);
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  gap: 30px;
+  margin-top: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.feature {
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-6px);
+}
+
+.feature h3 {
+  color: var(--primary);
+}
+
+/* PRICING */
+.pricing {
+  display: grid;
+  gap: 30px;
+  margin-top: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.plan {
+  padding: 40px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(0,0,0,0.05);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.plan:hover {
+  transform: translateY(-8px);
+}
+
+.plan.popular {
+  border: 2px solid var(--primary);
+  box-shadow: 0 20px 50px rgba(185,28,59,0.2);
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: white;
+  font-size: 12px;
+}
+
+.price {
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.price span {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  text-align: left;
+}
+
+ul li {
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+
+/* CTA SECTION */
+.cta-section {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, #b91c3b, #7f1d1d);
+  color: white;
+  padding: 60px;
+  border-radius: 30px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #94a3b8;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <strong>TEMA</strong>
+  <nav>
+    <a href="#features">Producto</a>
+    <a href="#planes">Precios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>La forma inteligente de gestionar emisiones</h1>
+  <p>Automatiza tu huella de carbono, cumple normativa y toma decisiones basadas en datos.</p>
+  <a href="#planes" class="btn btn-primary">Ver precios</a>
+</div>
+
+<section id="features">
+  <h2>Diseñado para empresas exigentes</h2>
+
+  <div class="features">
+    <div class="feature">
+      <h3>Automatización total</h3>
+      <p>Datos conectados en tiempo real.</p>
+    </div>
+    <div class="feature">
+      <h3>Compliance integrado</h3>
+      <p>ISO y normativa europea.</p>
+    </div>
+    <div class="feature">
+      <h3>Reporting profesional</h3>
+      <p>Listo para auditoría.</p>
+    </div>
+  </div>
+</section>
+
+<section id="planes">
+  <h2>Planes</h2>
+
+  <div class="pricing">
+
+    <div class="plan">
+      <h3>Acceso</h3>
+      <p class="price">3.012€ <span>/ año</span></p>
+      <ul>
+        <li>Software completo</li>
+        <li>Setup incluido</li>
+        <li>Soporte básico</li>
+      </ul>
+    </div>
+
+    <div class="plan popular">
+      <div class="badge">Recomendado</div>
+      <h3>Asesoría</h3>
+      <p class="price">7.512€ <span>/ año</span></p>
+      <ul>
+        <li>Cálculo huella</li>
+        <li>Informe anual</li>
+        <li>Soporte experto</li>
+      </ul>
+    </div>
+
+    <div class="plan">
+      <h3>Completo</h3>
+      <p class="price">10.362€ <span>/ año</span></p>
+      <ul>
+        <li>Gestión total</li>
+        <li>Informes avanzados</li>
+        <li>Auditoría</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-box">
+    <h2>Empieza a reducir emisiones hoy</h2>
+    <p>Solicita una demo personalizada.</p>
+    <a class="btn btn-primary">Contactar</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 TEMA · Plataforma de emisiones
+</footer>
+
+</body>
+</html>
